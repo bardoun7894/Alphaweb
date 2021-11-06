@@ -1,46 +1,17 @@
 
-
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title> RESPONSIVE LANDINE</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
- {{--    <link rel="stylesheet" href="{{url('css/style.css')}}">--}}
-    <link rel="stylesheet" href="{{url('css/responsive.css')}}" >
-    <link rel="stylesheet" href="{{url('font-family/style.css')}}" >
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <meta name="viewport" content="with=device-width,initial-scale=1.0" >
-</head>
-
+{{--head--}}
+@include('fronts.head_part')
 <body>
 <main>
     <div class="big-wrapper">
-        <header>
-        <div class="container" id="home">
-          <div class="logo">
-                    <img src="{{url('images/alp.png')}}" alt="">
-                    <h3>Alpha</h3>
-                </div>
-         <div class="links">
-                    <ul  id="menuList">
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#testimonials">عملائنا</a></li>
-                        <li><a href="#services">خدماتنا</a></li>
-                        <li><a href="#about">عنا</a></li>
-                        <li><a href="#">اتصل بنا</a></li>
-                    </ul>
-                </div>
-{{--                <input type="checkbox" id="menu-bar">--}}
-                <label  class="fas fa-bars" onclick="showLinks()"></label>
 
-            </div>
-        </header>
+{{--        header--}}
+         @include('fronts.header')
 {{--        full slider--}}
+
         <section>
-            <div  class="menuBlock">
-            </div>
             <ul id="adaptive" class="cs-hidden">
                 <li class="item-a">
                     {{--      slider box--}}
@@ -84,30 +55,6 @@
         </section>
 
 
-
-{{--        <div class="showcase-area">--}}
-{{--            <div class="container">--}}
-{{--                <div class="left">--}}
-{{--                    <div class="big-title">--}}
-{{--                        <h1>الفا الشاملة,</h1>--}}
-{{--                        <h1> للإنظمة وتطوير البرمجيات</h1>--}}
-{{--                    </div>--}}
-{{--                    <p class="text">--}}
-{{--                        تحقيق الريادة في مجال الانظمة المحاسبية والإدارية والانظمة المتخصصة--}}
-{{--                    </p>--}}
-{{--                    <div class="cta">--}}
-{{--                        <a class="btn">ابدأ الأن</a>--}}
-
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="right">--}}
-{{--                    <img width="50px" src="{{url('images/work.png')}}" alt="person">--}}
-
-{{--                </div>--}}
-
-{{--            </div>--}}
-{{--        </div>--}}
-
     </div>
 
      <hr class="divd">
@@ -138,19 +85,7 @@
                </div>
             </div>
         </div>
-{{--      <div class="column">--}}
-{{--            <div class="image">--}}
-{{--                <img src="{{url('images/eps.png')}}" alt="">--}}
-{{--            </div>--}}
-{{--            <div class="content">--}}
-{{--                <h3> الفا الشاملة للإنظمة وتطوير البرمجيات</h3>--}}
-{{--                <p>تأسست الفا الشاملة للإنظمة وتطوير البرمجيات لتلبي الإحتياجات التقنية للعملاء لمواكبة التطور الرقمي من خلال اتمتة العمل اليدوي الى انظمة محاسبية  وإدارية،--}}
-{{--                    وذلك بتقديم حلول متخصصة بطرق إبداعية تناسب إحتياجات كل العملاء بطرق سهلة ومبسطة، وبمنتجات ذات جودة وآمان عالي.--}}
-{{--                </p>--}}
 
-{{--            </div>--}}
-
-{{--        </div>--}}
     </section>
 {{--    divider--}}
     <hr class="divd">
@@ -179,48 +114,21 @@
     {{--      Reviews --}}
 <section class="system" id="system">
     <h1 class="heading">أنظمة و برامج</h1>
+
+
+
     <div class="box-container">
-        <div class="box">
-            <img src="{{url('images/accounting.jpeg')}}" alt="">
-             <div class="content">
-                 <h3>نظام أنفنتي لايت (INFINITE LITE)</h3>
-                 <p>نظام للمؤسسات المتوسطة والصغيرة
-                      </p>
-                 <a class="btn" href="#">اطلب الان</a>
-             </div>
-        </div>
-        <div class="box">
-            <img src="{{url('images/stringio.png')}}" alt="">
-             <div class="content">
-                 <h3>نظام محطات الوقود </h3>
-                 <p>نظام لإدارة محطات الوقود </p>
-                 <a class="btn" href="#">اطلب الان</a>
-             </div>
-        </div>
-        <div class="box">
-            <img src="{{url('images/accounting.jpeg')}}" alt="">
-             <div class="content">
-                 <h3>نظام أنفنتي (INFINITE)</h3>
-                 <p>  نظام محاسبي - اداري متكامل  </p>
-                 <a class="btn" href="#">المزيد</a>
-             </div>
-        </div>
-        <div class="box">
-            <img src="{{url('images/eurodollar.jpeg')}}" alt="">
-             <div class="content">
-                 <h3>نظام الصراف</h3>
-                 <p> لإدارة محلات الصرافة </p>
-                 <a class="btn" href="#">المزيد</a>
-             </div>
-        </div>
-        <div class="box">
-            <img src="{{url('images/employee.jpeg')}}" alt="">
-             <div class="content">
-                 <h3>نظام شئون الموظفين </h3>
-                 <p> نظام شئون الموظفين</p>
-                 <a class="btn" href="#">المزيد</a>
-             </div>
-        </div>
+       @foreach($systems as $system)
+
+                <div class="box">
+                    <img src="{{url('images/'.$system->image)}}" alt="">
+                    <div class="content">
+                        <h3>{{$system->name}}</h3>
+                        <p> {{$system->small_detail}} </p>
+                        <a class="btn" href="{{url('systemDetail/'.$system->id)}}">للمزيد</a>
+                    </div>
+                </div>
+        @endforeach
     </div>
 </section>
     <hr class="divd">
@@ -279,141 +187,13 @@
 
         </div>
     </section>
-
 </main>
 
-
-
-
-
-<link rel="stylesheet" href="{{url('css/lightslider.css')}}">
-
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
-<script src="{{url('js/lightslider.js')}}"></script>
-<script>
-    textabouticon = document.getElementsByClassName("text-about-icon");
-    textabouticon = document.getElementsByClassName("text-strong");
-
-    $("div.box-icon").mouseover(function () {
-
-        var about=$(this).text().trim();
-        switch (about){
-            case "الاهداف":
-             textabouticon[0].innerHTML=` لمساهمة الفاعلة في التحول الرقمي.
-تمكين رواد المال والأعمال بالإرتقاء بأعمالهم من خلال أنظمة محاسبية وإدارية مبسطة ذات جودة وكفاءة وأمان عالي.
-تلبية احتياجات العملاء  من برامج متخصصة ، وحلول لمواكبة التغيرات التقنية.
-المساهمة في تدريب وتأهيل المجمتع لمواكبة العالم الرقمي.`;
-                break;
-            case "الرؤية":
-            textabouticon[0].innerHTML="تحقيق الريادة في مجال الانظمة المحاسبية والإدارية والانظمة المتخصصة."
-                break;
-            case "عنا":
-                textabouticon[0].innerHTML="  تأسست الفا الشاملة للإنظمة وتطوير البرمجيات لتلبي الإحتياجات التقنية للعملاء لمواكبة التطور الرقمي من خلال اتمتة العمل اليدوي الى انظمة محاسبية وإدارية، وذلك بتقديم حلول متخصصة بطرق إبداعية تناسب إحتياجات كل العملاء بطرق سهلة ومبسطة، وبمنتجات ذات جودة وآمان عالي."
-                break;
-            // case "الرسالة":
-            //     textabouticon[0].innerHTML="الرؤية"
-            //     break;
-        }
-        }
-    )
-//full slider
-    $(document).ready(function() {
-        $('#adaptive').lightSlider({
-            adaptiveHeight:true,
-             speed: 500,
-            slideMargin: 20,
-            rtl:true,
-            item:1,
-            auto:true,
-            controls:false,
-            vThumbWidth:200,
-            // pauseOnHover:true,
-            // slideMargin:1,
-            loop:true,
-
-        });
-    });
-
-    //menulist
-    menuList = document.getElementById("menuList");
-    bigwrapper = document.getElementsByClassName("menuBlock");
-    menuList.style.maxHeight="0px";
-
-    window.addEventListener("resize", function(event) {
-// console.log(document.body.clientWidth+"heigth")
-        if(document.body.clientWidth>=1200){
-            // location.reload();
-            menuList.style.opacity = 1;
-        }else{
-            menuList.style.opacity=0;
-        }
-    })
-
-    function showLinks(){
-   // bigwrapper.style.visibility="visible";
-if(    bigwrapper[0].style.display=="block" ){
-    bigwrapper[0].style.display="none";
-}else{
-    bigwrapper[0].style.display="block";
-
-}
-if(menuList.style.maxHeight==="0px"){
-    menuList.style.maxHeight="180px"
-    menuList.style.opacity=1;
-}else{
-    menuList.style.maxHeight="0px"
-    menuList.style.opacity=0;
-
-}
-    }
-
-
-</script>
-
 </body>
-<footer>
-    {{--    footer--}}
+{{--   footer--}}
+@include('fronts.footer')
 
-    <div class="footer">
-        <div class="box-container">
-            <div class="box">
-                <h3>عنا</h3>
-                <p>تأسست الفا الشاملة للإنظمة وتطوير البرمجيات لتلبي الإحتياجات التقنية للعملاء لمواكبة التطور الرقمي من خلال اتمتة العمل اليدوي الى انظمة محاسبية  وإدارية، وذلك بتقديم حلول متخصصة بطرق إبداعية تناسب إحتياجات كل العملاء بطرق سهلة ومبسطة، وبمنتجات ذات جودة وآمان عالي.
-                </p>
 
-            </div>
-            <div class="box">
-                <h3> روابط  </h3>
-                <a href="#home">الرئيسية</a>
-                <a href="#services">خدمات</a>
-                <a href="#testimonials">عملائنا</a>
-
-            </div>
-            <div class="box">
-                <h3>تابعنا</h3>
-                <a href="#">فايسبوك</a>
-                <a href="#">انستغرام </a>
-                <a href="#">تويتر</a>
-            </div>
-            <div class="box">
-                <h3>تواصل معنا</h3>
-                <div class="info">
-                     <i class="fas fa-phone"></i>
-                     <p>212708150351+</p>
-                 </div>
-                <div class="info">
-                     <i class="fas fa-envelope"></i>
-                     <p>mbardouni@gmail.com</p>
-                 </div>
-                <div class="info">
-                     <i class="fas fa-map-marker-alt"></i>
-                     <p>السعودية,الخبر</p>
-                 </div>
-            </div>
-        </div>
-        <p class="text-light">© جميع الحقوق محفوظة لشركة Alpha</p>
-
-    </div>
-</footer>
+{{--  script part include javascript and links --}}
+@include('fronts.script_part')
 </html>

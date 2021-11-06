@@ -34,7 +34,7 @@ a{
 .big-wrapper{
     padding: 1.7rem 0 2rem;
     width: 100%;
-    height: 60vh;
+    height: 90vh;
     overflow: hidden;
     background-color: var(--backgroundColor);
     display: flex;
@@ -65,7 +65,8 @@ header .container{
     width: 40px;
 }
 .logo h3{
-    color: var(--darkTwo);
+    margin-top: .5rem;
+    color: var(--hoverColor);
     font-size: 1.55rem;
     line-height: 1.2;
     font-weight: 700;
@@ -121,12 +122,14 @@ header .container{
  color: var(--white-color);
 }
 /*full slider*/
-
+/*.adaptive{*/
+/*    */
+/*}*/
 
 .full-slider-box{
     /*margin-top: 2rem; */
     width: 100%;
-    height: 65vh;
+    height:65vh;
     display: flex;
     justify-content: center;
     background-size: cover;
@@ -346,7 +349,7 @@ header .container{
 }
 .system .box-container .box .content{
     position: absolute;
-    top: -100%;left: 0;
+    top: -100%; left: 0;
     height: 100%;
     padding: 2rem;
     padding-top: 5rem;
@@ -371,8 +374,9 @@ header .container{
 
 
 .footer{
+    position: relative;
+    bottom: 0;left: 0;
     direction: rtl;
-
     color: white;
     background-color: var(--maincolor);
     /*padding-top: 3rem;*/
@@ -417,10 +421,11 @@ header .container{
 .footer .box-container .box .info i{
     margin: .5rem 0;
     margin-right: 1rem;
-    border-radius: 50%;
+    border-radius: 100%;
     background: #fff;
     color: var(--hoverColor);
-    font-size: 1.5rem;
+    padding: .3rem .2rem;
+    font-size: 1rem;
 }
 .footer .box-container .box a:hover{
   text-decoration: underline;
@@ -491,6 +496,58 @@ header .container{
     background-color: var(--maincolor);
     border-radius: 50%;
 }
+.system_detail_container .row{
+    justify-content: right;
+    margin: 1rem 0;
+    display: flex;
+    background-color: var(--hoverColor);
+    padding: 50px 15px 50px 15px;
+    color: white;
+}
+  .decribe_container .date_title{
+      display: flex;
+      justify-items: center;
+      justify-content: space-between;
+      /*padding: 0 2rem;*/
+      margin-bottom:1rem ;
+      color: var(--lightOne);
+}
+.decribe_container{
+      padding: 10rem 12rem;
+
+}
+
+.decribe_container img{
+    /*margin: 1rem 10rem;*/
+    /*padding: 0 10rem;*/
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+}
+.text_container .row_div_text h2{
+    display: flex;
+    color: var(--hoverColor);
+    justify-content: center;
+
+}
+
+.text_container {
+    margin-top: 2rem;
+    display: flex;
+    justify-items: center;
+}
+
+.text_container .row_div_text p{
+    margin-top: 1rem;
+
+    display: flex;
+    color: var(--gray-color);
+    justify-items: left;
+    justify-content: center;
+}
+
+
+
 @media (max-width: 1200px) {
     html{
     font-size: 55%;
@@ -502,13 +559,13 @@ header .container{
 @media (max-width: 768px) {
     .footer .box-container .box p{
       font-size: .75rem;
-
     }
   .menuBlock{
     display: none;
     height:280px;
     }
- .full-slider-box{
+
+    .full-slider-box{
       width: 100%;
       height: 45vh;
      }
@@ -519,7 +576,9 @@ header .container{
         visibility: visible;
         opacity: 1;
     }
-
+.big-wrapper{
+    height: 65vh;
+}
     .container .links ul{
         justify-items: center;
         align-items: center;
@@ -554,8 +613,8 @@ header .container{
 
 
     .system .box-container{
-        display: grid;
-      grid-template-columns: repeat(2,50%);
+        display: block;
+      /*grid-template-columns: repeat(2,50%);*/
     }
 
 }
