@@ -62,7 +62,7 @@ header .container{
     cursor: pointer;
 }
 .logo img{
-    width: 40px;
+    width: 80px;
 }
 .logo h3{
     margin-top: .5rem;
@@ -134,21 +134,9 @@ header .container{
     justify-content: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:top;
 
-}
-.f-slide1{
-    background-image: url("../images/erp-img.jpeg");
-
-
-}
-.f-slide2{
-    background-image: url("../images/pc.jpg");
-
-}
-.f-slide3{
-    background-image: url("../images/security-lock.jpeg");
-}
+} 
 .slider-text-container{
     /*margin-top: 20px;*/
     position: absolute;
@@ -514,9 +502,7 @@ header .container{
 }
 .decribe_container{
       padding: 10rem 12rem;
-
 }
-
 .decribe_container img{
     /*margin: 1rem 10rem;*/
     /*padding: 0 10rem;*/
@@ -528,7 +514,6 @@ header .container{
     display: flex;
     color: var(--hoverColor);
     justify-content: center;
-
 }
 
 .text_container {
@@ -536,17 +521,13 @@ header .container{
     display: flex;
     justify-items: center;
 }
-
 .text_container .row_div_text p{
     margin-top: 1rem;
-
     display: flex;
     color: var(--gray-color);
     justify-items: left;
     justify-content: center;
 }
-
-
 
 @media (max-width: 1200px) {
     html{
@@ -610,9 +591,11 @@ header .container{
     .testimonials .box-container .box{
      flex: fit-content;
     }
-
-
     .system .box-container{
+        display: block;
+      /*grid-template-columns: repeat(2,50%);*/
+    }
+    .services .box-container{
         display: block;
       /*grid-template-columns: repeat(2,50%);*/
     }

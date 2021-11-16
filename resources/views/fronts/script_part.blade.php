@@ -41,8 +41,7 @@
                 controls:false,
                 vThumbWidth:200,
                 // pauseOnHover:true,
-                // slideMargin:1,
-                loop:true,
+                // slideMargin:1, 
 
             });
         });

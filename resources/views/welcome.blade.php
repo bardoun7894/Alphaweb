@@ -6,51 +6,27 @@
 <body>
 <main>
     <div class="big-wrapper">
-
 {{--        header--}}
          @include('fronts.header')
 {{--        full slider--}}
-
         <section>
             <ul id="adaptive" class="cs-hidden">
-                <li class="item-a">
+                 @foreach ($headers as $header)
+                 <li class="item-a" >
                     {{--      slider box--}}
-                    <div class="full-slider-box f-slide1">
+                    <div class="full-slider-box">
+                        <img src="{{url('/images/'.$header->image_url)}}">
                         <div class="slider-text-container">
-                            <div class="f-slider-text">
-                                <strong>أنظمة محاسبية ادارية متكاملة</strong>
-                                {{--                <a href="#" class="btn">اتصل بنا</a>--}}
-                            </div>
+                             <div class="f-slider-text">
+                             <strong>{{$header->detail}}</strong>
+                            {{--    <a href="#" class="btn">اتصل بنا</a>--}}
+                              </div>
                         </div>
                     </div>
-
-
                 </li>
-                <li class="item-b">
-                    {{--      slider box--}}
-                    <div class="full-slider-box f-slide2">
-                        <div class="slider-text-container">
-                            <div class="f-slider-text">
-                                <strong> انظمة حسب الطلب </strong>
-                                {{--                <a href="#" class="btn">اتصل بنا</a>--}}
-                            </div>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="item-c">
-                    {{--      slider box--}}
-                    <div class="full-slider-box f-slide3">
-                        <div class="slider-text-container">
-                            <div class="f-slider-text">
-                                <strong>نظام صلاحيات ورقابة دقيق، وآمان عــالي</strong>
-                                {{--                <a href="#" class="btn">اتصل بنا</a>--}}
-                            </div>
-                        </div>
-                    </div>
-
-
-                </li>
+              
+                @endforeach
+        
             </ul>
         </section>
 
@@ -112,10 +88,8 @@
     </section>
     <hr class="divd">
     {{--      Reviews --}}
-<section class="system" id="system">
+   <section class="system" id="system">
     <h1 class="heading">أنظمة و برامج</h1>
-
-
 
     <div class="box-container">
        @foreach($systems as $system)
@@ -192,7 +166,6 @@
 </body>
 {{--   footer--}}
 @include('fronts.footer')
-
 
 {{--  script part include javascript and links --}}
 @include('fronts.script_part')

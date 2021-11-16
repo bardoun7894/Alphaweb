@@ -1,8 +1,6 @@
 @include('fronts.head_part')
 
-
 @include('fronts.header')
-
 <div class="system_detail_container" >
 
       <div class="row">
@@ -22,16 +20,13 @@
         </div>
         <div class="image">
             <img src="{{url('images/'.$systems->image)}}" alt="">
-
         </div>
            <div class="text_container">
                <div class="row_div_text">
                    <h2>نبذة عن النظام</h2>
                    <p>{{$systems->description}}  </p>
                </div>
-
            </div>
-
        </div>
 
 </div>

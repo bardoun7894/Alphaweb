@@ -2,9 +2,8 @@
     <header>
         <div class="container" id="home">
             <div class="logo">
-                <img src="{{url('images/alp.png')}}" alt="">
-                <h3> Alulasoft </h3>
-            </div>
+                <img src="{{url('images/logo.png')}}" alt="">
+               </div>
             <div class="links">
                 <ul  id="menuList">
                     <li><a href="{{url('/')}}">الرئيسية</a></li>
