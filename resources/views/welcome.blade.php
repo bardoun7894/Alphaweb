@@ -6,9 +6,8 @@
 <body> 
     {{-- chat bot  --}} 
     <div class="chat_icon"  >
-        <a href="https://api.whatsapp.com/send?phone=+2120708150351">
-        <i class="fa fa-whatsapp" aria-hidden="true"></i>
-
+        <a href="https://api.whatsapp.com/send?phone={{$contacts[0]['number_phone']}}">
+        <img src="{{url('/images/whatsapp.png')}}">
       </a> 
     </div>
 

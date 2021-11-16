@@ -26,19 +26,19 @@
                 <h3>تواصل معنا</h3>
                 <div class="info">
                     <i class="fas fa-phone"></i>
-                    <p>212708150351+</p>
+                    <p>{{$contacts[0]['number_phone']}}</p>
                 </div>
                 <div class="info">
                     <i class="fas fa-envelope"></i>
-                    <p>mbardouni@gmail.com</p>
+                    <p>{{$contacts[0]['email']}}</p>
                 </div>
                 <div class="info">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p>السعودية,الخبر</p>
+                    <p>{{$contacts[0]['country']}},{{$contacts[0]['city']}}</p>
                 </div>
             </div>
         </div>
-        <p class="text-light">© جميع الحقوق محفوظة لشركة Alpha</p>
+        <p class="text-light">© جميع الحقوق محفوظة لشركة Al-ula-Soft</p>
 
     </div>
 </footer>

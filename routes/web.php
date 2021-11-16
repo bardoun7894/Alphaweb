@@ -16,13 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $systems=\App\Models\System::orderBy('OrderB')->where('visibility','1')->get();
     $headers=\App\Models\Header::all();
-
-    return view('welcome')->with(compact(['systems','headers']));
+    $contacts=\App\Models\Contact::all();
+    return view('welcome')->with(compact(['systems','headers','contacts']));
 });
 Route::get('systemDetail/{id}',function ($id){
     $systems=\App\Models\System::where('id',$id)->first();
-    
-
-    
+      
     return view('fronts.system-detail')->with(compact('systems'));
 });
