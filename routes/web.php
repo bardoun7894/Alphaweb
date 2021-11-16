@@ -14,13 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $systems=\App\Models\System::all();
+    $systems=\App\Models\System::orderBy('OrderB')->where('visibility','1')->get();
     $headers=\App\Models\Header::all();
 
     return view('welcome')->with(compact(['systems','headers']));
 });
 Route::get('systemDetail/{id}',function ($id){
     $systems=\App\Models\System::where('id',$id)->first();
-//    dd($systems);
+    
+
+    
     return view('fronts.system-detail')->with(compact('systems'));
 });

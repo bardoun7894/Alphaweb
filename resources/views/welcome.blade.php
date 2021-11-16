@@ -3,13 +3,24 @@
 <html>
 {{--head--}}
 @include('fronts.head_part')
-<body>
+<body> 
+    {{-- chat bot  --}} 
+    <div class="chat_icon"  >
+        <a href="https://api.whatsapp.com/send?phone=+2120708150351">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+
+      </a> 
+    </div>
+
+    {{-- end chat bot  --}}
+
 <main>
     <div class="big-wrapper">
 {{--        header--}}
          @include('fronts.header')
 {{--        full slider--}}
         <section>
+         
             <ul id="adaptive" class="cs-hidden">
                  @foreach ($headers as $header)
                  <li class="item-a" >

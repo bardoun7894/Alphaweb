@@ -19,10 +19,11 @@ class CreateSystemsTable extends Migration
             $table->string('small_detail');
             $table->text('image');
             $table->text('description');
+            $table->boolean('visibility');
+            $table->Integer('orderB');
             $table->timestamps();
         });
-    }
-
+    } 
     /**
      * Reverse the migrations.
      *
